@@ -1,0 +1,11 @@
+User Stories:
+
+1) As a user I want to be able to get the count frequency for unique words in a text document.
+
+2) As a user I want to have support for combinations of spaces, tabs, and newlines as separators.
+
+3) As a user I would like to have the option to type in the file name I want my statistics to be analyzed for.
+
+4) As a user I want the count to be determined in the document for Strings.
+
+5) As a user I want lower and upper case Strings to be treated as unique words.
