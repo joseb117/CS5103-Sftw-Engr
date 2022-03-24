@@ -1,14 +1,20 @@
 User Stories:
 
-1) As a user I want to be able to get the count frequency for unique words in a text document.
+1) Title: Visualization of statistics
+   Description: As a user I want to be able to see a list of the count frequency on the console for unique words in a text document. 
 
-2) As a user I want to have support for combinations of spaces, tabs, and newlines as separators.
+2) Title: Text Document Analysis 
+   Description: The text document analysis shall have support for combinations of spaces, tabs, and newlines as separators.
 
-3) As a user I would like to have the option to type in the file name I want my statistics to be analyzed for.
+3) Title: Specifying the Document as User Input
+   Description: As a user I would like to have the option to type in the file name I want my statistics to be analyzed for.
 
-4) As a user I want the count to be determined in the document for Strings.
+4) Title: Identifying the Input from the Document for Analysis
+   Description: The various word statistics shall be determined in the document for Strings.
 
-5) As a user I want lower and upper case Strings to be treated as unique words.
+5) Title: Unique Word Specification for Count and Replacement Use
+   Description: Lower and upper case Strings shall be treated as unique words. This applies to the count frequency and when replacing.
 
-6) As a user I want to be allowed to replace all occurrences of a word to a replacement word of choice. The replacement 
-   would only be done if the word matches a word as a whole.
+6) Title: Adding Feature for Word Replacement on the text Document
+   Description: As a user I want to be allowed to replace all occurrences of a word to a replacement word of choice. The replacement 
+                shall only be done if the word matches a word as a whole.

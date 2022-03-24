@@ -28,12 +28,13 @@ public class WordStats {
 				//the function call to calculate the document's word occurrences
 				calc.analyzeDocument(line);
 			}
+			
+			//display the word counts from the text document
+			calc.displayMap(calc.words);
 			s.close();
 		} catch(FileNotFoundException e) {
 			System.out.println("Error opening the file: " + fileName);
 			e.getStackTrace();
 		}
-
 	}
-
 }
