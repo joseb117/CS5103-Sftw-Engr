@@ -1,3 +1,5 @@
 
 *.class
 *.properties
+CS5103/target/classes/META-INF/maven/com.WordStats/CS5103/pom.properties
+CS5103/target/classes/sampleTextDoc.txt
