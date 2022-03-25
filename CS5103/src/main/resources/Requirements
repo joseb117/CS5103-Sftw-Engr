@@ -1,20 +1,70 @@
 User Stories:
 
 1) Title: Visualization of statistics
-   Description: As a user I want to be able to see a list of the count frequency on the console for unique words in a text document. 
+   Description: As a user I want to be able to see a list of the count frequency on the console for unique words in a text document.
+   
+   Test Case:
+   1) The user will provide the name of the text file into the console
+   2) After calculating the statistics of the document, the console will display the list of words and their counts for the user to view
 
 2) Title: Text Document Analysis 
    Description: The text document analysis shall have support for combinations of spaces, tabs, and newlines as separators.
-
+   
+   Test Case: 
+   1) When analyzing the document each line will be split into separate words
+   2) When splitting the words any space, tab, or newline should be accepted as input to the statistics logic
+   3) Each word will be stored on a HashMap along with their count regardless of the tabs, spaces, and newlines in the line of the document
+   4) When the list of words is provided, confirm that no spaces, tabs, or newlines are part of the counts
+   
+   
 3) Title: Specifying the Document as User Input
    Description: As a user I would like to have the option to type in the file name I want my statistics to be analyzed for.
+   
+   Test Case:
+   1) When executing the program the user will be asked for the file name they wish to analyze
+   2) After typing the file name the file will be opened, if the file is not found an error will be thrown
+   3) If the file is found the file will be checked for content. If not empty, the document will be read line by line and statistics will be shown
 
 4) Title: Identifying the Input from the Document for Analysis
    Description: The various word statistics shall be determined in the document for Strings.
+   
+   Test Case:
+   1) The user will provide the file name
+   2) The file will be opened and read line by line
+   3) The line will be split into words of String
+   4) Each word String will be stored into a HashMap to keep track of their count
+   5) If the String word already exists, the HashMap value will be updated with a count increment. Otherwise the new word will be added
+   6) Once the end of file has been reached the console will show the results to the user
 
 5) Title: Unique Word Specification for Count and Replacement Use
    Description: Lower and upper case Strings shall be treated as unique words. This applies to the count frequency and when replacing.
+   
+   Test Case:
+   1) On the given text document include instances of the same word, one with a Capital letter and the other with all lowercase.
+   2) When analyzing the document the list with counts should show them as different word instances
+   
 
 6) Title: Adding Feature for Word Replacement on the text Document
    Description: As a user I want to be allowed to replace all occurrences of a word to a replacement word of choice. The replacement 
                 shall only be done if the word matches a word as a whole.
+                
+   Test Case:
+   1) When prompted to answer whether a word replacement is desired type in the value '0' to say 'Yes'.
+   2) The user will then be asked to type in the word they want to replace along with the word replacing it.
+   3) After the statistics are ran make sure the replaced word is no longer in the list of words in the document. 
+   4) Confirm that the new replacement word is included in the list along with its count
+   
+                
+7) Title: Word Replacement on Text Document
+   Description: When the user asks to replace a word, the text in the document shall be updated with the new word
+   
+   Test Case:
+   1) When prompted to answer whether a word replacement is desired type in the value '0' to say 'Yes'.
+   2) The user will then be asked to type in the word they want to replace along with the word replacing it.
+   3) After the statistics are ran make sure the replaced word is no longer in the list of words in the document. 
+   4) Once the list of counts is finished and the writing to document prompt finishes, open the document and verify that the text in the document is updated per the new replacement word.
+   
+ 8) Title: Create Unit Tests
+    Description: Create unit test for all the functions and obtain at least 75% code coverage of the word statistics program.
+ 
+ 

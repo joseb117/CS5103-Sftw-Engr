@@ -2,6 +2,7 @@
  * Author: Jose Burnias
  * CS5103 - Software Engineering
  * Program to calculate different statistics of unique words within a text document
+ * GitHub Repo Link: https://github.com/joseb117/CS5103-Sftw-Engr
  */
 package com.WordStats;
 
