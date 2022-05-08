@@ -18,6 +18,7 @@ public class WordStats {
 		String decision = null;
 		String rplWord = null;
 		String origWord = null;
+		String keyword = null;
 		//try to read from the file and catch an exception if the file is not found
 		try {
 			Scanner scan = new Scanner(System.in);
@@ -47,6 +48,10 @@ public class WordStats {
 				System.out.println("No words were chosen to replace, working on word counts....");
 			}
 			
+			//ask the user if they want to get line number for words of choice
+			System.out.print("Keyword to search line numbers for: ");
+			keyword = scan.nextLine();
+			
 			File doc = new File("C:\\Users\\joseb\\OneDrive\\Documents\\GitHub\\CS5103-Sftw-Engr\\CS5103\\src\\main\\resources\\" + fileName);
 			Scanner s = new Scanner(doc);
 			while(s.hasNextLine())
@@ -54,8 +59,12 @@ public class WordStats {
 				//get the first line of the document and begin parsing the words
 				String line = s.nextLine();
 				
+				//grepline third requirement function to get line numbers a word appears on
+				calc.grepLine(fileName, keyword, line);
+				
 				//the function call to calculate the document's word occurrences
 				calc.analyzeDocument(line, origWord, rplWord, s, fileName);
+				
 			}
 			
 			//display the word counts from the text document

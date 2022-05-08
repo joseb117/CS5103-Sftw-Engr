@@ -9,11 +9,12 @@ import java.util.Scanner;
 public class calculateWordStats {
 	HashMap<String, Integer> words = new HashMap<String, Integer>();
 	String outputTxt = "";
+	int lineNum = 1;
 	//function used to parse and analyze the text document line by line
 	public void analyzeDocument(String line, String orig, String rpl, Scanner doc, String fileName)
 	{
 		//if the user provided replacement words then replace 
-		if(!orig.equals(null) && !rpl.equals(null) && line.contains(orig))
+		if(orig != null && rpl != null && line.contains(orig))
 		{
 			line = line.replaceAll("(?<!\\S)"+orig+"(?!\\S)", rpl);
 		}
@@ -47,6 +48,32 @@ public class calculateWordStats {
 			}
 		}
 	}
+	
+	//grepline function for third requirement
+	//takes document name and keyword as input. Returns line of document where keyword matches
+	void grepLine(String fileName, String keyword, String line)
+	{
+		boolean appears = false;
+		//begin parsing the line of words retrieved from the document
+		String text[] = line.split("\\W+");
+		
+		
+		for(String s: text)
+		{
+			if(s.equals(keyword))
+			{
+				appears = true;
+			}
+		}
+		
+		//return whether the keyword appears
+		if(appears == true)
+		{
+			System.out.println(keyword + " appears in line: " + lineNum);
+		}
+		lineNum++;
+	}
+	
 	
 	//function that prints the words and their counts
 	public void displayMap(HashMap<String, Integer> map)
