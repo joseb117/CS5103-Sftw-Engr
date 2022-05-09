@@ -67,4 +67,10 @@ User Stories:
  8) Title: Create Unit Tests
     Description: Create unit test for all the functions and obtain at least 75% code coverage of the word statistics program.
  
- 
+ 9) Title: Grepline function for line number analysis on words
+ 	Description: As a user I when I enter a word and filename, the program should return the line number of the word I provided.
+ 	
+ 	Test Case:
+ 	1) Make sure the user input is valid and not null
+ 	2) Check that the word is found on the document by checking each line
+ 	3) if found have the program output the what line number the word ws found in the document.

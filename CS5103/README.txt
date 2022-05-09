@@ -1,10 +1,6 @@
-GitHub Repo Link: https://github.com/joseb117/CS5103-Sftw-Engr
-
-
-This code implements the various word statistics of a given text document. The WordStats.java file contains the main method so this file should be 
-executed when attempting to run. The user will be asked to type in the file name of the text document they want their statistics to analyzed for.
-The current path set on the code might need to be changed when attempting to run. Once the file name is typed teh user will be asked to provide different 
-input as to whether they want to replace a word or not. Depending on the response the program will run the statistics of the text document by word per line 
-by line splitting. The user will see a list of counts on the console along with the word they belong to. A text document called sampleTextDoc.txt 
-was used to test this and can be modified as needed. Once the counts are displayed, the file will be overwritten with any replaced words the user
-specified.
+This project consists of 2 classes: WordStats.java and calculateWordStats.java along with a test class called calculateWordStatsTest.java.
+The WordStats.java file contains the main method which reads from a file and calculates statistics based off given words from user input.
+The calculateWordStats class gets called to do those calculations. There a 3 methods within this class. One, called analyzeDocument parses the text
+document line by line and checks whether words are found, if they are if adds them to a hashmap and keeps count of how many there are. Once complete, the method returns the 
+stats to the user. Grepline was a new method added later on that takes a filename and a keyword, whcih it then uses to check if a line in the document has the word. If
+it does it returns the line number it was found in. The last method is displayMap which is used in the analyzeDocument method to display the hashmap statistics.
